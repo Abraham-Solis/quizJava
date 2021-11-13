@@ -46,5 +46,25 @@ body {
   z-index: 1;
   font-weight: 400;
   letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container .btn:hover a 
+{
+  letter-spacing: 3px;
+}
+
+.container .btn a::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(to left, rgba(255,255,255,0.15), transparent);
+  transform: skewX(45deg) translateX(-150%) ;
 
 }
