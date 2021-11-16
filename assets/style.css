@@ -6,12 +6,20 @@
 }
 
 body {
-  position: relative;
+  /* position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   min-height: 100vh;
   background-color: #2B2D42;
+}
+
+.header {
+  color: #EDF2F4;
+}
+
+.header2 {
+  color: #8D99AE;
 }
 
 .container {
@@ -49,6 +57,7 @@ body {
   text-decoration: none;
   overflow: hidden;
   transition: 0.5s;
+  backdrop-filter: blur(15px);
 }
 
 .container .btn:hover a {
@@ -71,17 +80,52 @@ body {
   transform: skewX(45deg) translateX(200%);
 }
 
-.container .btn::before
-{
- content: '';
- position: absolute;
- left: 50%;
- transform: translateX(-50%);
- bottom: -5px;
- width: 30px;
- height: 10px;
- background: #f00;
- border-radius: 10px;
- transition:0.5s ;
+.container .btn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: greenyellow;
+  border-radius: 10px;
+  transition: .5s;
+  transition-delay: 0s;
+}
 
+.container .btn:hover::before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition: .05s;
+  transition-delay: .05s;
+}
+
+.container .btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: greenyellow;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.container .btn:hover::after {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: .05s;
+}
+
+.container .btn:nth-child(1)::before, .container .btn:nth-child(1)::after {
+  background: greenyellow;
+  box-shadow: 0 0 5px greenyellow, 0 0 15px greenyellow, 0 0 30px greenyellow, 0 0 60px greenyellow,
 }
