@@ -1,14 +1,29 @@
+//list of questions and asnwers
 
-const questions = ['What should appear at the very end of your JavaScript?', 'What are variables used for in JavaScript Programs?', ' Inside which HTML element do we put the JavaScript?', '_________ is a wrapped Java array, accessed from within JavaScript code.', 'What is the correct JavaScript syntax to write "Hello World" ?']
+const myQuizQuestions = [
+  {
 
-const answers = ['The </script>', 'Storing numbers, dates, or other values', '<script>', 'JavaArray', 'document.write("Hello World")']
-
-
-
-
+  }
+]
 
 
-// Start-NewRound
+
+
+
+// Start-NewRound/Start Game
 
 document.getElementById('startGame').addEventListener('click', () => newGame())
+
+
+const newGame =() => {
+
+  document.getElementById('startGame').style.display ="none"
+  document.getElementById('button1').style.display ="block"
+  document.getElementById('button2').style.display = "block"
+  document.getElementById('button3').style.display = "block"
+  document.getElementById('button4').style.display = "block"
+
+
+}
+
 
