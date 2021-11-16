@@ -3,21 +3,22 @@
 const myQuizQuestion =[
 
   {
-    question: "What does HTML stand for?",
+    question: "Why so JavaScript and Java have similar name?",
 
-    answer1: "Correct",
+    answer1: "JavaScript is a stripped-down version of Java",
 
-    answer2: "Wrong",
+    answer2: "JavaScript's syntax is loosely based on Java's",
 
-    answer3: "Wrong",
+    answer3: "They both originated on the island of Java",
 
-    answer4: "A"
+    answer4: "None of the above"
 
   },
+  
   {
     question: "What does HTML stand for? #2",
 
-    answer1: "Correct",
+    answer1: "Correct #2",
 
     answer2: "Wrong",
 
@@ -42,14 +43,13 @@ const newGame =() => {
   let quizQuestions = document.createElement('div')
   quizQuestions.innerHTML=`
       <ul class="list-group">
-      <li class="list-group-item">${myQuizQuestion[0].question}</li>
-      <li class="list-group-item">${myQuizQuestion[0].answer1}</li>
-      <li class="list-group-item">${myQuizQuestion[0].answer2}</li>
-      <li class="list-group-item">${myQuizQuestion[0].answer3}</li>
-      <li class="list-group-item">${myQuizQuestion[0].answer4}</li>
+      <li class="list-group-item">${myQuizQuestion[next].question}</li>
+      <li class="list-group-item">${myQuizQuestion[next].answer1}</li>
+      <li class="list-group-item">${myQuizQuestion[next].answer2}</li>
+      <li class="list-group-item">${myQuizQuestion[next].answer3}</li>
+      <li class="list-group-item">${myQuizQuestion[next].answer4}</li>
     </ul>
-   
-  
+
   `
   document.getElementById('questions').append(quizQuestions)
 }
@@ -57,19 +57,9 @@ const newGame =() => {
 
 document.addEventListener('click',event =>{
   if (event.target.classList.contains('list-group-item')){
-    let quizQuestions = document.createElement('div')
-    quizQuestions.innerHTML = `
-      <ul class="list-group">
-      <li class="list-group-item">${myQuizQuestion[1].question}</li>
-      <li class="list-group-item">${myQuizQuestion[1].answer1}</li>
-      <li class="list-group-item">${myQuizQuestion[1].answer2}</li>
-      <li class="list-group-item">${myQuizQuestion[1].answer3}</li>
-      <li class="list-group-item">${myQuizQuestion[1].answer4}</li>
-    </ul>
-   
-  
-  `
-    document.getElementById('questions').append(quizQuestions)
+  next ++ 
+    questions.innerHTML = " "
+  newGame()
     
   }
 

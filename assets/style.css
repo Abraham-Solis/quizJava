@@ -5,9 +5,9 @@
   font-family: 'Sarabun', sans-serif;
 }
 
-/* body {
-  position: relative;
-  display: flex;
+* body {
+  /* position: relative;
+  display: flex; */
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -22,7 +22,7 @@
   color: #8D99AE;
 }
 
-.container {
+/* .container {
   width: 600px;
   display: flex;
   flex-wrap: wrap;
@@ -128,4 +128,4 @@
 .container .btn:nth-child(1)::before, .container .btn:nth-child(1)::after {
   background: greenyellow;
   box-shadow: 0 0 5px greenyellow, 0 0 15px greenyellow, 0 0 30px greenyellow, 0 0 60px greenyellow,
-} */
+} */ 
