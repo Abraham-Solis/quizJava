@@ -41,15 +41,15 @@ const myQuizQuestion =[
   },
 
   {
-    question: "WInside which HTML element do we put the JavaScript?",
+    question: "Inside which HTML element do we put the JavaScript?",
 
-    answer1: "<js>",
+    answer1: "js",
 
-    answer2: "<scripting>",
+    answer2: "scripting",
 
-    answer3: "<script>",
+    answer3: "script",
 
-    answer4: "<javascript>"
+    answer4: "javascript"
   },
 
   {
@@ -62,7 +62,7 @@ const myQuizQuestion =[
     answer3: "Client",
 
     answer4: "FileUpLoad"
-  }
+  },
 
 ]
 
