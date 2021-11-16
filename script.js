@@ -14,18 +14,54 @@ const myQuizQuestion =[
     answer4: "None of the above"
 
   },
-  
+
   {
-    question: "What does HTML stand for? #2",
+    question: "What are variables used for in JavaScript Programs?",
 
-    answer1: "Correct #2",
+    answer1: "Varying randomly",
 
-    answer2: "Wrong",
+    answer2: "Causing high-school algebra flashbacks",
 
     answer3: "Wrong",
 
-    answer4: "A"
+    answer4: "None of the above"
 
+  },
+
+  {
+    question: "Which of the following is not a valid JavaScript variable name?",
+
+    answer1: "2names",
+
+    answer2: "_first_and_last_names",
+
+    answer3: "FirstAndLast",
+
+    answer4: "None of the above"
+  },
+
+  {
+    question: "WInside which HTML element do we put the JavaScript?",
+
+    answer1: "<js>",
+
+    answer2: "<scripting>",
+
+    answer3: "<script>",
+
+    answer4: "<javascript>"
+  },
+
+  {
+    question: " Choose the client-side JavaScript object?",
+
+    answer1: "Database",
+
+    answer2: "Cursor",
+
+    answer3: "Client",
+
+    answer4: "FileUpLoad"
   }
 
 ]
