@@ -81,6 +81,7 @@ let score = 0
 let timerObject
 let countdownTimer= 100
 
+//Start Timer
 
 document.getElementById('go').addEventListener('click', () => {
   timerObject = setInterval(function () {
@@ -98,9 +99,8 @@ document.getElementById('go').addEventListener('click', () => {
 }
 )
 
-// Start Game
+// Start Game / Prompts
 
-// document.getElementById('startGame').addEventListener('click', () => newGame())
 
 const newGame =() => {
 
@@ -108,11 +108,17 @@ const newGame =() => {
   let quizQuestions = document.createElement('div')
   quizQuestions.innerHTML=`
       <ul class="list-group">
-      <li color = red > ${myQuizQuestion[next].question}</li>
+
+      <li class = "prompt class="list-group-item" > ${myQuizQuestion[next].question}</li>
+
       <li data-value ='1' class="list-group-item">${myQuizQuestion[next].answer1}</li>
+
       <li data-value ='2' class="list-group-item">${myQuizQuestion[next].answer2}</li>
+
       <li data-value ='3' class="list-group-item">${myQuizQuestion[next].answer3}</li>
+
       <li data-value ='4' class="list-group-item">${myQuizQuestion[next].answer4}</li>
+
     </ul>
 
   `
@@ -149,11 +155,17 @@ document.addEventListener('click',event =>{
 
 })
 
-
+  //Leaderboards
 function showResults() {
   document.getElementById('go').style.display="none";
   questions.innerHTML =`
-  <h6> Total Score: ${score+countdownTimer}</h6><input id="Username" placeholder="your initals"></input>
+  <h6 style="color: #8D99AE;"> Total Score: ${score+countdownTimer}</h6>
+
+  <br>
+
+  <input id="Username" placeholder="your initals"></input><hr>
+
+  <br>
 
   <button id="UserId"> Add to Leaderboards </button>
   

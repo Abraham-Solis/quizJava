@@ -22,5 +22,11 @@
   color: #8D99AE;
 }
 
+.timerText {
+  color: #EF233C;
+}
 
-
+.prompt {
+  color: #EDF2F4;
+  font-weight: bolder;
+}
