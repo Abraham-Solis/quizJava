@@ -81,6 +81,7 @@ let score = 0
 let timerObject
 let countdownTimer= 100
 
+let scores = JSON.parse(localStorage.getItem('high')) || []
 
 //Start Timer
 
@@ -164,7 +165,7 @@ function showResults() {
 
   <br>
 
-  <input id="Username" placeholder="your initals"></input><hr>
+  <input id="usernameInital" placeholder="your initals"></input><hr>
 
   <br>
 
@@ -174,4 +175,16 @@ function showResults() {
   
 }
 
+function saveScore() {
+  let username = document.querySelector('usernameInitials').value
+  console.log(username)
+
+
+  highscore.push({
+    username:username,
+    score: score+countdownTimer
+  })
   
+localStorage.setItem("score", JSON.stringify(highscore))
+
+}
