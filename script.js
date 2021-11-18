@@ -81,6 +81,7 @@ let score = 0
 let timerObject
 let countdownTimer= 100
 
+
 //Start Timer
 
 document.getElementById('go').addEventListener('click', () => {
@@ -136,7 +137,7 @@ document.addEventListener('click',event =>{
     console.log(userChoice)
     
     if (userChoice == myQuizQuestion[next].good) {
-      score += 15
+      score += 5
       document.getElementById('right').innerText="You are right!"
       
     } else {
@@ -170,7 +171,7 @@ function showResults() {
   <button id="UserId"> Add to Leaderboards </button>
   
   `
-
   
 }
 
+  
