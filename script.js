@@ -81,7 +81,6 @@ let score = 0
 let timerObject
 let countdownTimer= 100
 
-// let scores = JSON.parse(localStorage.getItem('scores')) || []
 
 //Start Timer
 
@@ -169,7 +168,7 @@ function showResults() {
 
   <br>
 
-  <button id="UserId"> Add to Leaderboards </button>
+  <button onclick="saveScore()"> Add to Leaderboards </button>
   
   `
   
@@ -177,7 +176,7 @@ function showResults() {
 
 function saveScore() {
   let username = document.querySelector('#usernameInitials').value
-  let scores = JSON.parse(localStorage.getItem('scores')) || []
+  let highscore  = JSON.parse(localStorage.getItem('scores')) || []
   console.log(username)
 
 
