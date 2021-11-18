@@ -11,9 +11,9 @@ const myQuizQuestion = [
 
     answer3: "They both originated on the island of Java",
 
-    answer4: "None of the above"
+    answer4: "None of the above",
     
-    correct: [2]
+    good: 2
 
   },
 
@@ -26,9 +26,9 @@ const myQuizQuestion = [
 
     answer3: "Wrong",
 
-    answer4: "None of the above"
+    answer4: "None of the above",
 
-    correct: [1]
+    good: 1
 
   },
 
@@ -41,9 +41,9 @@ const myQuizQuestion = [
 
     answer3: "FirstAndLast",
 
-    answer4: "None of the above"
+    answer4: "None of the above",
 
-    correct: [1]
+    good: 1
   },
 
   {
@@ -55,9 +55,9 @@ const myQuizQuestion = [
 
     answer3: "script",
 
-    answer4: "javascript"
+    answer4: "javascript",
     
-    correct: [2]
+    good: 2
   },
 
   {
@@ -69,17 +69,17 @@ const myQuizQuestion = [
 
     answer3: "Client",
 
-    answer4: "FileUpLoad"
+    answer4: "FileUpLoad",
 
-    correct: [4]
+    good: 4
   }
 
-]
+];
 
 let next = 0
 let score = 0
 let timerObject
-let countdownTimer= 160
+let countdownTimer= 100
 
 
 document.getElementById('go').addEventListener('click', () => {
@@ -96,7 +96,7 @@ document.getElementById('go').addEventListener('click', () => {
   }, 1000)
   newGame()
 }
-
+)
 
 // Start Game
 
@@ -108,11 +108,11 @@ const newGame =() => {
   let quizQuestions = document.createElement('div')
   quizQuestions.innerHTML=`
       <ul class="list-group">
-      <li ${myQuizQuestion[next].question}</li>
-      <li data-value ="1" class="list-group-item">${myQuizQuestion[next].answer1}</li>
-      <li data-value ="2" class="list-group-item">${myQuizQuestion[next].answer2}</li>
-      <li data-value ="3" class="list-group-item">${myQuizQuestion[next].answer3}</li>
-      <li data-value ="4" class="list-group-item">${myQuizQuestion[next].answer4}</li>
+      <li color = red > ${myQuizQuestion[next].question}</li>
+      <li data-value ='1' class="list-group-item">${myQuizQuestion[next].answer1}</li>
+      <li data-value ='2' class="list-group-item">${myQuizQuestion[next].answer2}</li>
+      <li data-value ='3' class="list-group-item">${myQuizQuestion[next].answer3}</li>
+      <li data-value ='4' class="list-group-item">${myQuizQuestion[next].answer4}</li>
     </ul>
 
   `
@@ -126,12 +126,12 @@ const newGame =() => {
 document.addEventListener('click',event =>{
   if (event.target.classList.contains('list-group-item')){
 
-    let userChoice = event.target.getAttrabute('data-value')
+    var userChoice = event.target.getAttribute(`data-value`)
     console.log(userChoice)
     
-    if (userChoice == myQuizQuestion[next].correct) {
+    if (userChoice == myQuizQuestion[next].good) {
       score += 15
-      document.getElementById('right').innerText="You are Correct!"
+      document.getElementById('right').innerText="You are right!"
       
     } else {
       document.getElementById('right').innerText ="You are Wrong!"
@@ -152,8 +152,8 @@ document.addEventListener('click',event =>{
 
 function showResults() {
   document.getElementById('go').style.display="none";
-  question.innerHTML =`
-  <h6> Total Score : ${score+countdownTimer}</h6><input="Username" placeholder="your initals"></input>
+  questions.innerHTML =`
+  <h6> Total Score: ${score+countdownTimer}</h6><input id="Username" placeholder="your initals"></input>
 
   <button id="UserId"> Add to Leaderboards </button>
   

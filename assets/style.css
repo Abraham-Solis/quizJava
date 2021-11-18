@@ -22,6 +22,10 @@
   color: #8D99AE;
 }
 
+.score {
+  color: #EF233C;
+}
+
 /* .container {
   width: 600px;
   display: flex;
@@ -128,4 +132,4 @@
 .container .btn:nth-child(1)::before, .container .btn:nth-child(1)::after {
   background: greenyellow;
   box-shadow: 0 0 5px greenyellow, 0 0 15px greenyellow, 0 0 30px greenyellow, 0 0 60px greenyellow,
-} */ 
+} */
