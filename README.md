@@ -7,4 +7,4 @@ This game requires some java experince to get through to the end! First youll ha
 
 Live Link :https://abraham-solis.github.io/quizJava/
 
-<img src="![javaQuiz](https://user-images.githubusercontent.com/92957388/142356568-8c9dbfb6-55aa-478f-a5c3-acd15fe7ecfb.PNG)" alt="javaQuiz">
+<img src="(https://user-images.githubusercontent.com/92957388/142356568-8c9dbfb6-55aa-478f-a5c3-acd15fe7ecfb.PNG)" alt="javaQuiz">
