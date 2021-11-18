@@ -81,7 +81,7 @@ let score = 0
 let timerObject
 let countdownTimer= 100
 
-let scores = JSON.parse(localStorage.getItem('scores')) || []
+// let scores = JSON.parse(localStorage.getItem('scores')) || []
 
 //Start Timer
 
@@ -165,7 +165,7 @@ function showResults() {
 
   <br>
 
-  <input id="usernameInitals" placeholder="your initals"></input><hr>
+  <input id="usernameInitals" placeholder="username"></input><hr>
 
   <br>
 
@@ -177,6 +177,7 @@ function showResults() {
 
 function saveScore() {
   let username = document.querySelector('#usernameInitials').value
+  let scores = JSON.parse(localStorage.getItem('scores')) || []
   console.log(username)
 
 
@@ -185,27 +186,25 @@ function saveScore() {
     score: score+countdownTimer
   })
   
-localStorage.setItem("score", JSON.stringify(highscore))
+  localStorage.setItem("score", JSON.stringify(highscore))
+  let highscorediv = document.getElementById(`highscore`)
+
+  for (let i = 0; i <= highscore.length; i++) {
+    let highscoreElem = document.createElement(`div`)
+    highscore.innerHTML = `
+    <h1>${highscore[i].username}</h1>
+    <h1>${highscore[i].score}</h1>
+    `
+
+    highscorediv.append(highscoreElem)
+
+
+  }
+
+
+
+
+
 
 }
 
-
-// document.getElementById('submitScore').addEventListener('click', event => {
-//   event.preventDefault()
-//   const record = {
-//     username: document.getElementById('username').value,
-//     score: points
-//   }
-//   scores.push(record)
-//   localStorage.setItem('scores', JSON.stringify(scores))
-//   document.getElementById('addScores').style.display = 'none'
-//   document.getElementById('displayScores').style.display = 'block'
-//   scores = scores.sort((a, b) => b.score - a.score)
-//   scores.forEach(score => {
-//     let scoreElem = document.createElement('div')
-//     scoreElem.innerHTML = `<h6>Username: ${score.username} | Score: ${score.score}</h6><hr>`
-//     document.getElementById('displayScores').append(scoreElem)
-//   })
-//   points = 0
-//   document.getElementById('go').style.display = 'block'
-// })
