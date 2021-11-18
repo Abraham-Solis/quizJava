@@ -81,7 +81,7 @@ let score = 0
 let timerObject
 let countdownTimer= 100
 
-let scores = JSON.parse(localStorage.getItem('high')) || []
+let scores = JSON.parse(localStorage.getItem('scores')) || []
 
 //Start Timer
 
@@ -165,7 +165,7 @@ function showResults() {
 
   <br>
 
-  <input id="usernameInital" placeholder="your initals"></input><hr>
+  <input id="usernameInitals" placeholder="your initals"></input><hr>
 
   <br>
 
@@ -176,7 +176,7 @@ function showResults() {
 }
 
 function saveScore() {
-  let username = document.querySelector('usernameInitials').value
+  let username = document.querySelector('#usernameInitials').value
   console.log(username)
 
 
@@ -188,3 +188,24 @@ function saveScore() {
 localStorage.setItem("score", JSON.stringify(highscore))
 
 }
+
+
+// document.getElementById('submitScore').addEventListener('click', event => {
+//   event.preventDefault()
+//   const record = {
+//     username: document.getElementById('username').value,
+//     score: points
+//   }
+//   scores.push(record)
+//   localStorage.setItem('scores', JSON.stringify(scores))
+//   document.getElementById('addScores').style.display = 'none'
+//   document.getElementById('displayScores').style.display = 'block'
+//   scores = scores.sort((a, b) => b.score - a.score)
+//   scores.forEach(score => {
+//     let scoreElem = document.createElement('div')
+//     scoreElem.innerHTML = `<h6>Username: ${score.username} | Score: ${score.score}</h6><hr>`
+//     document.getElementById('displayScores').append(scoreElem)
+//   })
+//   points = 0
+//   document.getElementById('go').style.display = 'block'
+// })
