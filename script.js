@@ -181,7 +181,7 @@ function saveScore() {
 
 
   highscore.push({
-    username:username,
+    username: username,
     score: score+countdownTimer
   })
   
